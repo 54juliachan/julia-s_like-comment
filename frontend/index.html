@@ -24,23 +24,27 @@
       如果建議有用真的中獎了請一杯星巴克，謝謝。
     </p>
     <div>
-      <img src="frontend\img\chat.png" alt="">
-      <img src="frontend\img\alien.png" alt="">
+      <img src="img\chat.png" alt="">
+      <img src="img\alien.png" alt="">
     </div>
-    <div></div>
+    <div>
+      <button id="likeBtn">
+        <img src="img/like.png" alt="">
+        <span id="likeCount">0</span>
+      </button>
+      <button>
+        <img src="img\comment.png" alt="">
+        <span></span>
+      </button>
+    </div>
   </section>
-  <section></section>
-  
-  <p>❤️ 讚數：<span id="likeCount">0</span></p>
-  <button id="likeBtn">按讚</button>
-
-  <div class="comment-box">
-    <input type="text" id="commentInput" placeholder="留下留言..." />
-    <button id="commentBtn">送出留言</button>
-  </div>
-
-  <div class="comment-list" id="commentList"></div>
-
+  <section>
+    <div class="comment-box">
+      <input type="text" id="commentInput" placeholder="留下留言..." />
+      <button id="commentBtn">送出留言</button>
+    </div>
+    <div class="comment-list" id="commentList"></div>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>
