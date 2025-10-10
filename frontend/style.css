@@ -1,11 +1,10 @@
 body {
-  font-family: "Microsoft JhengHei", sans-serif;
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
   background: #fafafa;
   max-width: 500px;
   margin: 40px auto;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px #ddd;
 }
 
 button {
