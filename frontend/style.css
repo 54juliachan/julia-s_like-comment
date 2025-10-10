@@ -5,9 +5,14 @@ body {
   margin: 40px auto;
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
 }
-
+.img01{
+    width: 10rem;
+}
 button {
+    height: 3rem;
   padding: 8px 16px;
   border: none;
   border-radius: 6px;
@@ -29,4 +34,7 @@ button:hover {
   margin-top: 20px;
   border-top: 1px solid #ccc;
   padding-top: 10px;
+}
+.section01{
+    width: 80%;
 }
