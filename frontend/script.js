@@ -25,7 +25,13 @@ document.getElementById("likeBtn").addEventListener("click", async () => {
 document.getElementById("commentBtn").addEventListener("click", async () => {
   const text = document.getElementById("commentInput").value.trim();
   if (!text) return;
-  const res = await fetch(`${API_URL}/comment/${encodeURIComponent(text)}`, { method: "POST" });
+
+  const res = await fetch(`${API_URL}/comment`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text })
+  });
+
   const data = await res.json();
   renderComments(data.comments);
   document.getElementById("commentInput").value = "";
