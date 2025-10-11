@@ -1,3 +1,7 @@
+#喚醒終端機步驟，先後輸入以下兩串
+#cd "C:\Users\user\Desktop\碩一上\前端練習\chatgpt做的作業-改\backend"
+#uvicorn main:app --reload
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
