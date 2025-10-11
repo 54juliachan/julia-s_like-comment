@@ -11,7 +11,17 @@ async function loadData() {
 // 顯示留言
 function renderComments(comments) {
   const list = document.getElementById("commentList");
-  list.innerHTML = comments.map(c => `<p>💬 ${c}</p>`).join("");
+  list.innerHTML = comments.map(c => `
+    <div class="comment-box">
+      <div class="comment-ms">
+        <div class="user-box">
+          <img class="user-icon" src="img/user.png" alt="user icon">
+          <p>user_unknown</p>
+        </div>
+        <p>${c}</p>
+      </div>
+    </div>
+  `).join("");
 }
 
 // 按讚
