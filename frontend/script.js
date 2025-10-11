@@ -5,6 +5,7 @@ async function loadData() {
   const res = await fetch(`${API_URL}/post`);
   const data = await res.json();
   document.getElementById("likeCount").textContent = data.likes;
+  document.getElementById("commentCount").textContent = data.commentCount; // 顯示留言數
   renderComments(data.comments);
 }
 
@@ -22,6 +23,7 @@ function renderComments(comments) {
       </div>
     </div>
   `).join("");
+  document.getElementById("commentCount").textContent = comments.length; // 更新留言數
 }
 
 // 按讚

@@ -8,7 +8,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-#允許前端跨來源
+# 允許前端跨來源
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -17,29 +17,31 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-#用dictionary儲存資料
+# 用 dictionary 儲存資料
 data = {
     "likes": 0,
-    "comments": []
+    "comments": [],
+    "commentCount": 0   # 新增留言數欄位
 }
 
-#取得目前資料
+# 取得目前資料
 @app.get("/post")
 def get_post():
     return data
 
-#按讚
+# 按讚
 @app.post("/like")
 def add_like():
     data["likes"] += 1
     return data
 
-#留言資料模型
+# 留言資料模型
 class Comment(BaseModel):
     text: str
 
-#新增留言（用 JSON body）
+# 新增留言
 @app.post("/comment")
 def add_comment(comment: Comment):
     data["comments"].append(comment.text)
+    data["commentCount"] = len(data["comments"])  # 每新增留言時更新留言數
     return data
