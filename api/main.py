@@ -1,5 +1,5 @@
 #喚醒終端機步驟，先後輸入以下兩串
-#cd "C:\Users\user\Desktop\碩一上\coding練習\like&comment\backend"
+#cd "C:\Users\user\Desktop\碩一上\coding練習\like&comment\api"
 #uvicorn main:app --reload
 
 from fastapi import FastAPI
